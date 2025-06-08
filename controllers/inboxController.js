@@ -2,7 +2,6 @@ const imaps = require('imap-simple');
 const db = require('../firebase');
 require('dotenv').config();
 
-
 exports.checkEmailStatus = async (req, res) => {
   const { search } = req.query;
   if (!search) return res.status(400).json({ error: 'Search term (name or email) is required' });

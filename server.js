@@ -12,13 +12,12 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-app.use('/api/inbox', inboxRoutes);
+app.use('/api', inboxRoutes);
 app.use('/api', testMailRoute);
 
 // Root Route
 app.get('/', (req, res) => {
   res.send('Email Inbox Checker API is running');
-  console.log(process.env.GOOGLE_APPLICATION_CREDENTIALS);
 });
 
 // Global Error Handling Middleware

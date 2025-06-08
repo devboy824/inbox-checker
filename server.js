@@ -18,6 +18,7 @@ app.use('/api', testMailRoute);
 // Root Route
 app.get('/', (req, res) => {
   res.send('Email Inbox Checker API is running');
+  console.log(process.env.GOOGLE_APPLICATION_CREDENTIALS);
 });
 
 // Global Error Handling Middleware
